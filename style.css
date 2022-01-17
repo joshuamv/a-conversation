@@ -2,11 +2,6 @@
 /* basics + reset */
 
 @font-face {
-  font-family: "gigxa";
-  src: url("fonts/Ladi-magilioregular.otf") format("truetype");
-}
-
-@font-face {
   font-family: "everett";
   src: url("fonts/everett/TWKEverett-Super-web.ttf") format("truetype");
   font-weight: 1000;
@@ -122,7 +117,7 @@ h1 {
 
 .sound-button{
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   right: 20px;
   width: 30px;
   height: 30px;

@@ -40,8 +40,8 @@ function draw() {
 
 function pointerAnimation() {
   noStroke();
-  fill(200,random(0,10));
-  ellipse(mouseX, mouseY, 3);
+  fill(200,random(0,20));
+  ellipse(mouseX, mouseY, 2.5);
 }
 
 function bgLines(){
