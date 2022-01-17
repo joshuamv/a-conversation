@@ -849,130 +849,109 @@ function endGame() {
         }, 2000);
 
         setTimeout(function () {
-          titles.innerHTML = "We hope this experience...";
-          rValueDots = 190;
-          gValueDots = 190;
-          bValueDots = 190;
-        }, 2400);
-
-        setTimeout(function () {
           titles.innerHTML = "Has";
           rValueDots = 180;
           gValueDots = 180;
           bValueDots = 180;
-        }, 4800);
+        }, 4000);
 
         setTimeout(function () {
           titles.innerHTML = "Has allowed";
           rValueDots = 160;
           gValueDots = 160;
           bValueDots = 160;
-        }, 5200);
+        }, 4400);
 
         setTimeout(function () {
           titles.innerHTML = "Has allowed you";
           rValueDots = 140;
           gValueDots = 140;
           bValueDots = 140;
-        }, 5600);
+        }, 4800);
 
         setTimeout(function () {
           titles.innerHTML = "Has allowed you to";
           rValueDots = 120;
           gValueDots = 120;
           bValueDots = 120;
-        }, 6000);
+        }, 5200);
 
         setTimeout(function () {
           titles.innerHTML = "Has allowed you to feel";
           rValueDots = 100;
           gValueDots = 100;
           bValueDots = 100;
-        }, 6400);
+        }, 5600);
 
         setTimeout(function () {
           titles.innerHTML = "Has allowed you to feel heard";
           rValueDots = 80;
           gValueDots = 80;
           bValueDots = 80;
-        }, 6800);
-
-        setTimeout(function () {
-          titles.innerHTML = "Has allowed you to feel heard...";
-          rValueDots = 80;
-          gValueDots = 80;
-          bValueDots = 80;
-        }, 7200);
+        }, 6000);
 
         setTimeout(function () {
           titles.innerHTML = "This";
           rValueDots = 60;
           gValueDots = 60;
           bValueDots = 60;
-        }, 9200);
+        }, 8000);
 
         setTimeout(function () {
           titles.innerHTML = "This is";
           rValueDots = 40;
           gValueDots = 40;
           bValueDots = 40;
-        }, 9600);
+        }, 8400);
 
         setTimeout(function () {
           titles.innerHTML = "This is your";
           rValueDots = 20;
           gValueDots = 20;
           bValueDots = 20;
-        }, 10000);
+        }, 8800);
 
         setTimeout(function () {
           titles.innerHTML = "This is your conversation";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 10400);
+        }, 9200);
 
         setTimeout(function () {
           titles.innerHTML = "This is your conversation map";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 10800);
-
-        setTimeout(function () {
-          titles.innerHTML = "This is your conversation map...";
-          rValueDots = 0;
-          gValueDots = 0;
-          bValueDots = 0;
-        }, 11200);
+        }, 9600);
 
         setTimeout(function () {
           titles.innerHTML = "Thank";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 13400);
+        }, 11600);
 
         setTimeout(function () {
           titles.innerHTML = "Thank you";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 13800);
+        }, 12000);
 
         setTimeout(function () {
           titles.innerHTML = "Thank you for";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 14200);
+        }, 12400);
 
         setTimeout(function () {
           titles.innerHTML = "Thank you for sharing";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 14600);
+        }, 12800);
 
       }, 2200);
     }, 8200);
@@ -1107,47 +1086,47 @@ function whiteToPurpleDots() {
 
 function hideAnswer() {
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 1; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 1; color: black; font-size: 300px;");
   }, 1);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.9; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.9; color: black; font-size: 300px;");
   }, 100);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.8; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.8; color: black; font-size: 300px;");
   }, 200);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.7; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.7; color: black; font-size: 300px;");
   }, 300);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.6; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.6; color: black; font-size: 300px;");
   }, 400);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.5; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.5; color: black; font-size: 300px;");
   }, 500);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.4; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.4; color: black; font-size: 300px;");
   }, 600);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.3; color: black;  font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.3; color: black;  font-size: 300px;");
   }, 700);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.2; color: black;  font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.2; color: black;  font-size: 300px;");
   }, 800);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0.1; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0.1; color: black; font-size: 300px;");
   }, 900);
 
   setTimeout(function () {
-    answer.setAttribute("style", "display: flex; opacity: 0; color: black; font-size: 400px;");
+    answer.setAttribute("style", "display: flex; opacity: 0; color: black; font-size: 300px;");
   }, 1000);
 }
 
@@ -1157,43 +1136,43 @@ function floatAnswer() {
     }, 1);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 0.05; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 310px;");
+      answer.setAttribute("style", "display: flex; opacity: 0.05; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 300px;");
     }, 100);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 0.1; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 320px;");
+      answer.setAttribute("style", "display: flex; opacity: 0.1; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 310px;");
     }, 200);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 0.3; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 330px;");
+      answer.setAttribute("style", "display: flex; opacity: 0.3; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 310px;");
     }, 300);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 0.5; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 340px;");
+      answer.setAttribute("style", "display: flex; opacity: 0.5; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 310px;");
     }, 400);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 0.7; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 350px;");
+      answer.setAttribute("style", "display: flex; opacity: 0.7; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 310px;");
     }, 500);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 0.8; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 360px;");
+      answer.setAttribute("style", "display: flex; opacity: 0.8; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 310px;");
     }, 600);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 0.9; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5));  font-size: 370px;");
+      answer.setAttribute("style", "display: flex; opacity: 0.9; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5));  font-size: 310px;");
     }, 700);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 1; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5));  font-size: 380px;");
+      answer.setAttribute("style", "display: flex; opacity: 1; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5));  font-size: 310px;");
     }, 800);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 1; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 390px;");
+      answer.setAttribute("style", "display: flex; opacity: 1; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 310px;");
     }, 900);
 
     setTimeout(function () {
-      answer.setAttribute("style", "display: flex; opacity: 1; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 400px;");
+      answer.setAttribute("style", "display: flex; opacity: 1; color: black; filter: blur(0px) drop-shadow(0px 0px 50px rgba(10, 10, 10, 5)); font-size: 300px;");
     }, 1000);
 }
 
