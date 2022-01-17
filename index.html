@@ -14,20 +14,24 @@
   </head>
   <body>
     <div id="content">
-      <div class="answer-container" id="answer-container">
+      <div class="absolute-container" id="answer-container">
         <h2 id="answer">answer</h2>
       </div>
-      <h1 class="startTitle" id="titles">Welcome</h1>
-      <form action="" method="POST">
-        <div class="inputDiv" id="inputDiv">
-          <input type="text" onclick = "bgOn()" onkeyup="textInput()" id="inputField" name="inputField"/>
-          <div class="sendButton" id="sendButton">
-            Send
+      <div class="absolute-container">
+        <h1 class="startTitle" id="titles">Welcome</h1>
+      </div>
+      <div class="absolute-container" id="lower-div">
+        <form action="" method="POST">
+          <div class="inputDiv" id="inputDiv">
+            <input type="text" onclick = "bgOn()" onkeyup="textInput()" id="inputField" name="inputField"/>
+            <div class="sendButton" id="sendButton">
+              Send
+            </div>
           </div>
+        </form>
+        <div class="button" id="startButton">
+          Start
         </div>
-      </form>
-      <div class="button" id="startButton">
-        Start
       </div>
     </div>
     <canvas id="canvas1"></canvas>

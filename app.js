@@ -22,7 +22,7 @@ var particleNum     = 10000;
 var smallTitle     = "font-size: 50px; filter: blur(3px);";
 var bigTitle       = "font-size: 70px; filter: blur(4px);";
 var showInputField = "opacity: 1; height:100px; margin: 30px 10px 30px 10px;";
-var hideInputField = "opacity: 0; height:0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;";
+var hideInputField = "opacity: 0; height:100px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;";
 var hideButton     = "opacity: 0; height: 0vh; padding: 0px; font-size: 0px; filter: blur(10px);";
 var showButton     = "opacity: 1; filter: blur(0px); padding: 10px 30px 10px 30px; font-size: 25px; height: auto;";
 var showSendButton = "opacity: 1; filter: blur(0px); font-size: 25px; height: auto; padding: 35px 30px 35px 30px; cursor: pointer;"
@@ -331,7 +331,7 @@ function gameStart() {
     }, 10500);
 
     setTimeout(function () {
-      titles.setAttribute("style", showTitle);
+      titles.setAttribute("style", bigTitle);
       rValueDots = 250;
       gValueDots = 250;
       bValueDots = 250;
@@ -356,8 +356,10 @@ function question1() {
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
   setTimeout(function () {
-    titles.setAttribute("style", smallTitle);
     floatAnswer();
+    setTimeout(function () {
+      inputField.setAttribute("style", hideInputField);
+    }, 10);
   }, 200);
 
   //show next question
@@ -472,8 +474,10 @@ function question2() {
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
   setTimeout(function () {
-    titles.setAttribute("style", smallTitle);
     floatAnswer();
+    setTimeout(function () {
+      inputField.setAttribute("style", hideInputField);
+    }, 10);
   }, 200);
 
   //show next question
@@ -481,10 +485,6 @@ function question2() {
     hideAnswer();
     setTimeout(function () {
       titles.setAttribute("style", bigTitle);
-
-      setTimeout(function () {
-        inputField.setAttribute("style", hideInputField);
-      }, 900);
 
       setTimeout(function () {
         inputField.classList.remove('sentInput');
@@ -545,7 +545,6 @@ function question3() {
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
   setTimeout(function () {
-    titles.setAttribute("style", smallTitle);
     floatAnswer();
   }, 200);
 
@@ -639,7 +638,6 @@ function question4() {
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
   setTimeout(function () {
-    titles.setAttribute("style", smallTitle);
     floatAnswer();
   }, 200);
 
@@ -712,7 +710,6 @@ function question5() {
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
   setTimeout(function () {
-    titles.setAttribute("style", smallTitle);
     floatAnswer();
   }, 200);
 
@@ -789,7 +786,6 @@ function endGame() {
     //show answer
     answer.innerHTML = document.querySelector('#inputField').value;
     setTimeout(function () {
-      titles.setAttribute("style", smallTitle);
       floatAnswer();
     }, 200);
 

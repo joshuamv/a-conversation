@@ -110,7 +110,7 @@ h1 {
 }
 
 
-#answer-container{
+.absolute-container{
   position: absolute;
   display: flex;
   width: 100%;
@@ -118,6 +118,10 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#lower-div{
+  padding-top:250px;
 }
 
 #answer{
