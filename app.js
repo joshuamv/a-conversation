@@ -26,6 +26,7 @@ var hideInputField = "opacity: 0; height:0px; padding-left: 0px; padding-right: 
 var hideButton     = "opacity: 0; height: 0vh; padding: 0px; font-size: 0px; filter: blur(10px);";
 var showButton     = "opacity: 1; filter: blur(0px); padding: 10px 30px 10px 30px; font-size: 25px; height: auto;";
 var showSendButton = "opacity: 1; filter: blur(0px); font-size: 25px; height: auto; padding: 35px 30px 35px 30px; cursor: pointer;"
+var hideSendButton = "opacity: 0; filter: blur(0px); font-size: 25px; height: auto; padding: 35px 30px 35px 30px; cursor: pointer;"
 var showTitle      = "opacity: 0.1; filter: blur(5px);";
 var hideTitle      = "opacity: 0; filter: blur(100px);";
 var rValueDots     = 200;
@@ -350,6 +351,7 @@ function question1() {
 
   inputField.classList.add('sentInput');
   inputField.classList.remove('inputDiv');
+  sendButton.setAttribute("style", hideSendButton);
 
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
@@ -465,6 +467,7 @@ function question2() {
 
   inputField.classList.add('sentInput');
   inputField.classList.remove('inputDiv');
+  sendButton.setAttribute("style", hideSendButton);
 
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
@@ -537,6 +540,7 @@ function question3() {
 
   inputField.classList.add('sentInput');
   inputField.classList.remove('inputDiv');
+  sendButton.setAttribute("style", hideSendButton);
 
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
@@ -630,6 +634,7 @@ function question4() {
 
   inputField.classList.add('sentInput');
   inputField.classList.remove('inputDiv');
+  sendButton.setAttribute("style", hideSendButton);
 
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
@@ -702,6 +707,7 @@ function question5() {
 
   inputField.classList.add('sentInput');
   inputField.classList.remove('inputDiv');
+  sendButton.setAttribute("style", hideSendButton);
 
   //show answer
   answer.innerHTML = document.querySelector('#inputField').value;
@@ -778,6 +784,7 @@ function endGame() {
 
     inputField.classList.add('sentInput');
     inputField.classList.remove('inputDiv');
+    sendButton.setAttribute("style", hideSendButton);
 
     //show answer
     answer.innerHTML = document.querySelector('#inputField').value;
