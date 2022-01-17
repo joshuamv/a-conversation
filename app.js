@@ -10,6 +10,8 @@ var inputField      = document.getElementById("inputDiv");
 var inputFieldActual= document.getElementById("inputField");
 var titles          = document.getElementById("titles");
 var answer          = document.getElementById("answer");
+var muteBtn         = document.getElementById("mute-button");
+var unmuteBtn         = document.getElementById("unmute-button");
 
 var particleArray   = [];
 var cursorLocation  = document.getElementById("cursor");
@@ -35,6 +37,11 @@ var bValueDots     = 200;
 
 var gameStage      = 0;
 
+
+// files //
+var audioBackground = new Audio('audio/audio.m4a');
+
+
 const mouse = {
   x: null,
   y: null,
@@ -55,12 +62,24 @@ window.addEventListener("mousemove", function(event) {
 window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
 
 
+muteBtn.addEventListener("click", function(event) {
+  audioBackground.pause();
+  unmuteBtn.setAttribute("style", "display: flex;");
+  muteBtn.setAttribute("style", "display: none;");
+});
 
+unmuteBtn.addEventListener("click", function(event) {
+  audioBackground.play();
+  muteBtn.setAttribute("style", "display: flex;");
+  unmuteBtn.setAttribute("style", "display: none;");
+});
 
 // button click //
 startButton.addEventListener("click", function(event) {
 
   if (gameStage == 0) {
+    audioBackground.play();
+    muteBtn.setAttribute("style", "display: flex;");
     gameStart();
     return;
   }

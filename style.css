@@ -91,7 +91,7 @@ body{
   /* flex-direction: column; */
   /* justify-content: center; */
   /* align-items: center; */
-  overflow: visible;
+  overflow: hidden;
   cursor: none;
 }
 
@@ -120,8 +120,25 @@ h1 {
   align-items: center;
 }
 
+.sound-button{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.2;
+  transition-timing-function: ease-out;
+  transition: 0.6s;
+  display: none;
+}
+
+.sound-button:hover{
+  position: absolute;
+  opacity: 0.7;
+}
+
 #lower-div{
-  padding-top:250px;
+  padding-top: 240px;
 }
 
 #answer{
