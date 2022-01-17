@@ -1,0 +1,179 @@
+
+var currentQuestion = 0;
+var canvas = document.getElementById("canvas1");
+var ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var startButton = document.getElementById("startButton");
+var inputField = document.getElementById("inputField");
+var titles = document.getElementById("titles");
+var line1 = document.getElementById("line1");
+var line2 = document.getElementById("line2");
+var line3 = document.getElementById("line3");
+var counter = 0;
+
+
+var particleArray = [];
+var cursorLocation = document.getElementById("cursor");
+var cursor1Location = document.getElementById("cursor1");
+var cursor2Location = document.getElementById("cursor2");
+var counter = 10;
+
+const mouse = {
+  x: null,
+  y: null,
+  radius: 200,
+}
+
+window.addEventListener("mousemove", function(event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+  cursorLocation.setAttribute("style", "top:"+(mouse.y - 10) +"px; left:"+(mouse.x - 10 )+"px;");
+  cursor1Location.setAttribute("style", "top:"+(mouse.y - 10) +"px; left:"+(mouse.x - 10 )+"px;");
+  cursor2Location.setAttribute("style", "top:"+(mouse.y - 10) +"px; left:"+(mouse.x - 10 )+"px;");
+  // cursorLocation.style.width = ((sin(counter*0.11)+15)*15)+"px";
+});
+
+//game start
+startButton.addEventListener("click", function(event) {
+  startGame = true;
+
+  startButton.setAttribute("style", "opacity: 0; height:0vh; padding: 0px; font-size: 0px; filter: blur(10px);");
+
+  titles.setAttribute("style", "margin-bottom: 0px; font-size: 200px; filter: blur(100px);");
+  line1.setAttribute("style", "display: flex; filter: blur(5px);");
+  line2.setAttribute("style", "display: flex;");
+  line3.setAttribute("style", "display: flex;");
+
+  setTimeout(function () {
+    titles.setAttribute("style", "margin-bottom: 0px; font-size: 200px; filter: blur(100px);");
+    line1.setAttribute("style", "display: flex; filter: blur(2px); font-size: 80px;");
+    line2.setAttribute("style", "display: flex;");
+    line3.setAttribute("style", "display: flex;");
+  }, 300);
+
+  setTimeout(function () {
+    titles.setAttribute("style", "margin-top: 0px; font-size: 200px; filter: blur(100px);");
+    line1.setAttribute("style", "font-size: 200px; filter: blur(100px);");
+    line2.setAttribute("style", "display: flex; filter: blur(2px); font-size: 80px;");
+    line3.setAttribute("style", "display: flex;");
+  }, 3000);
+
+  setTimeout(function () {
+    titles.setAttribute("style", "margin-top: 0px; font-size: 200px; filter: blur(100px);");
+    line1.setAttribute("style", "margin-top: 0px; font-size: 200px; filter: blur(100px);");
+    line2.setAttribute("style", "font-size: 200px; filter: blur(100px)");
+    line3.setAttribute("style", "display: flex; filter: blur(2px); font-size: 80px;");
+  }, 6000);
+
+  setTimeout(function () {
+    inputField.setAttribute("style", "opacity: 1; height:5vh; padding-left: 1.5vw; padding-right: 1.5vw; padding-top: 2vh; padding-bottom: 2vh; margin: 10px 10px 30px 10px;");
+  }, 9000);
+
+  setTimeout(function () {
+    line3.innerHTML = "When was the last time you cried?";
+  }, 10000);
+});
+
+ctx.fillStyle = "white";
+ctx.font = "100px";
+ctx.fillText = ("A", 10, 60);
+
+ctx.strokeStyle = "white";
+ctx.strokeRect(0, 0, 100, 100);
+const textCoordinates = ctx.getImageData(0, 0, 100, 100);
+
+class Particle {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = Math.random(0,2); //particles radius
+    this.baseX = this.x;
+    this.baseY = this.y;
+    this.density = (Math.random() * 30) + 1;
+  }
+  draw(){
+    ctx.fillStyle = "white";
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.fill();
+  }
+  update(){
+    let dx = mouse.x - this.x;
+    let dy = mouse.y - this.y;
+    let distance = Math.sqrt(dx * dx + dy * dy);
+    let forceDirectionX = dx / distance;
+    let forceDirectionY = dy / distance;
+    let maxDistance = mouse.radius;
+    let force = (maxDistance - distance)/ maxDistance;
+    let directionX = forceDirectionX * force * this.density;
+    let directionY = forceDirectionY * force * this.density;
+
+    if (distance < mouse.radius) {
+      this.x -= directionX;
+      this.y -= directionY;
+    }else {
+      if(this.x !== this.baseX){
+        let dx = this.x - this.baseX;
+        this.x -= dx/10;
+      }
+      if (this.x !== this.baseY) {
+        let dy = this.y - this.baseY;
+        this.y -= dy/10;
+      }
+    }
+  }
+}
+
+function init() {
+  particleArray = [];
+  for (var i = 0; i < 10000; i++) { //number of particles
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height;
+    particleArray.push(new Particle(x, y));
+  }
+}
+
+init();
+console.log(particleArray);
+
+function animate() {
+  counter = counter + 0.1;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (var i = 0; i < particleArray.length; i++) {
+    particleArray[i].draw();
+    particleArray[i].update();
+  }
+  // connect();
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// function connect() {
+//   let opacityValue = 1;
+//   for (var a = 0; a <  particleArray.length; a++) {
+//     for (var b = a; b <  particleArray.length; b++) {
+//       let dx = particleArray[a].x - particleArray[b].x;
+//       let dy = particleArray[a].y - particleArray[b].y;
+//       let distance = Math.sqrt(dx * dx + dy * dy);
+//       opacityValue = 1 - (distance/50);
+//       ctx.strokeStyle = "rgba(255,255,255," + opacityValue +")";
+//
+//       // if (distance < 10000) {
+//         ctx.lineWidth = 1;
+//         ctx.beginPath();
+//         ctx.moveTo(particleArray[a].x, particleArray[a].y);
+//         ctx.lineTo(particleArray[a].x, particleArray[a].y);
+//         ctx.stroke();
+//       // }
+//     }
+//   }
+// }
+
+// document.addEventListener("DOMContentLoaded", startGame);
+//
+// function startGame() {
+//   document.getElementById("questionh1").innerHTML = currentQuestion;
+// }
