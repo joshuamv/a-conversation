@@ -134,10 +134,10 @@ h1 {
 
 .disclaimer{
   position: absolute;
-  top: 5px;
+  bottom: 5px;
   left:20px;
   color: white;
-  opacity: 0.4;
+  opacity: 0.2;
   font-size: 12px;
   font-family: everett;
   filter: blur(0.3px);
@@ -147,18 +147,13 @@ h1 {
 
 .disclaimer:hover{
   position: absolute;
-  top: 5px;
-  left:20px;
-  color: white;
-  opacity: 1;
-  font-size: 12px;
-  font-family: everett;
-  filter: blur(0.3px);
+  opacity: 0.6;
+  filter: blur(0px);
 }
 
 .disclaimerBlurred{
   position: absolute;
-  top: 5px;
+  bottom: 5px;
   left:20px;
   color: white;
   opacity: 0.1;
@@ -171,12 +166,7 @@ h1 {
 
 .disclaimerBlurred:hover{
   position: absolute;
-  top: 5px;
-  left:20px;
-  color: white;
-  opacity: 1;
-  font-size: 12px;
-  font-family: everett;
+  opacity: 0.6;
   filter: blur(0.3px);
 }
 

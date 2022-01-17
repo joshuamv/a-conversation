@@ -41,7 +41,7 @@ function draw() {
 function pointerAnimation() {
   noStroke();
   fill(200,random(0,10));
-  ellipse(mouseX, mouseY, 2);
+  ellipse(mouseX, mouseY, 3);
 }
 
 function bgLines(){

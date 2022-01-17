@@ -979,74 +979,46 @@ function endGame() {
         }, 12800);
 
         setTimeout(function () {
-          titles.innerHTML = "A one of a kind representation";
-          rValueDots = 0;
-          gValueDots = 0;
-          bValueDots = 0;
-        }, 13200);
-
-        setTimeout(function () {
-          titles.innerHTML = "A one of a kind representation of";
-          rValueDots = 0;
-          gValueDots = 0;
-          bValueDots = 0;
-        }, 13600);
-
-        setTimeout(function () {
-          titles.innerHTML = "A one of a kind representation of your";
-          rValueDots = 0;
-          gValueDots = 0;
-          bValueDots = 0;
-        }, 14000);
-
-        setTimeout(function () {
-          titles.innerHTML = "A one of a kind representation of your experience";
-          rValueDots = 0;
-          gValueDots = 0;
-          bValueDots = 0;
-        }, 14400);
-
-        setTimeout(function () {
           titles.innerHTML = "Thank";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 16400);
+        }, 14800);
 
         setTimeout(function () {
           titles.innerHTML = "Thank you";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 16800);
+        }, 15200);
 
         setTimeout(function () {
           titles.innerHTML = "Thank you for";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 17200);
+        }, 15600);
 
         setTimeout(function () {
           titles.innerHTML = "Thank you for sharing";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 17600);
+        }, 16000);
 
         setTimeout(function () {
           titles.innerHTML = "The";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 19600);
+        }, 19000);
 
         setTimeout(function () {
           titles.innerHTML = "The End";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
-        }, 20000);
+        }, 19400);
 
       }, 2200);
     }, 8200);
