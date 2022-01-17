@@ -11,7 +11,8 @@ var inputFieldActual= document.getElementById("inputField");
 var titles          = document.getElementById("titles");
 var answer          = document.getElementById("answer");
 var muteBtn         = document.getElementById("mute-button");
-var unmuteBtn         = document.getElementById("unmute-button");
+var unmuteBtn       = document.getElementById("unmute-button");
+var disclaimer      = document.getElementById("disclaimer");
 
 var particleArray   = [];
 var cursorLocation  = document.getElementById("cursor");
@@ -80,6 +81,8 @@ startButton.addEventListener("click", function(event) {
   if (gameStage == 0) {
     audioBackground.play();
     muteBtn.setAttribute("style", "display: flex;");
+    disclaimer.classList.add('disclaimerBlurred');
+    disclaimer.classList.remove('disclaimer');
     gameStart();
     return;
   }
@@ -761,7 +764,7 @@ function question5() {
 
       setTimeout(function () {
         titles.innerHTML = "What's your";
-        titles.setAttribute("style", "color: rgba(230, 210, 210, 1);");
+        titles.setAttribute("style", "color: rgba(230, 210, 210, 1); font-size:70px;");
         rValueDots = 230;
         gValueDots = 210;
         bValueDots = 210;
@@ -769,7 +772,7 @@ function question5() {
 
       setTimeout(function () {
         titles.innerHTML = "What's your biggest";
-        titles.setAttribute("style", "color: rgba(240, 200, 200, 1);");
+        titles.setAttribute("style", "color: rgba(240, 200, 200, 1); font-size:70px;");
         rValueDots = 240;
         gValueDots = 200;
         bValueDots = 200;
@@ -777,7 +780,7 @@ function question5() {
 
       setTimeout(function () {
         titles.innerHTML = "What's your biggest dream";
-        titles.setAttribute("style", "color: rgba(255, 190, 190, 1);");
+        titles.setAttribute("style", "color: rgba(255, 190, 190, 1); font-size:70px;");
         rValueDots = 255;
         gValueDots = 190;
         bValueDots = 190;
@@ -785,7 +788,7 @@ function question5() {
 
       setTimeout(function () {
         titles.innerHTML = "What's your biggest dream?";
-        titles.setAttribute("style", "color: rgba(255, 180, 180, 1);");
+        titles.setAttribute("style", "color: rgba(255, 180, 180, 1); font-size:70px;");
         rValueDots = 255;
         gValueDots = 180;
         bValueDots = 180;
@@ -948,32 +951,102 @@ function endGame() {
         }, 9600);
 
         setTimeout(function () {
-          titles.innerHTML = "Thank";
+          titles.innerHTML = "A";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
         }, 11600);
 
         setTimeout(function () {
-          titles.innerHTML = "Thank you";
+          titles.innerHTML = "A one";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
         }, 12000);
 
         setTimeout(function () {
-          titles.innerHTML = "Thank you for";
+          titles.innerHTML = "A one of";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
         }, 12400);
 
         setTimeout(function () {
-          titles.innerHTML = "Thank you for sharing";
+          titles.innerHTML = "A one of a kind";
           rValueDots = 0;
           gValueDots = 0;
           bValueDots = 0;
         }, 12800);
+
+        setTimeout(function () {
+          titles.innerHTML = "A one of a kind representation";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 13200);
+
+        setTimeout(function () {
+          titles.innerHTML = "A one of a kind representation of";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 13600);
+
+        setTimeout(function () {
+          titles.innerHTML = "A one of a kind representation of your";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 14000);
+
+        setTimeout(function () {
+          titles.innerHTML = "A one of a kind representation of your experience";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 14400);
+
+        setTimeout(function () {
+          titles.innerHTML = "Thank";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 16400);
+
+        setTimeout(function () {
+          titles.innerHTML = "Thank you";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 16800);
+
+        setTimeout(function () {
+          titles.innerHTML = "Thank you for";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 17200);
+
+        setTimeout(function () {
+          titles.innerHTML = "Thank you for sharing";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 17600);
+
+        setTimeout(function () {
+          titles.innerHTML = "The";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 19600);
+
+        setTimeout(function () {
+          titles.innerHTML = "The End";
+          rValueDots = 0;
+          gValueDots = 0;
+          bValueDots = 0;
+        }, 20000);
 
       }, 2200);
     }, 8200);

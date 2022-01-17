@@ -122,7 +122,7 @@ h1 {
 
 .sound-button{
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   width: 30px;
   height: 30px;
@@ -130,6 +130,54 @@ h1 {
   transition-timing-function: ease-out;
   transition: 0.6s;
   display: none;
+}
+
+.disclaimer{
+  position: absolute;
+  top: 5px;
+  left:20px;
+  color: white;
+  opacity: 0.4;
+  font-size: 12px;
+  font-family: everett;
+  filter: blur(0.3px);
+  transition: 0.6s;
+  transition-timing-function: ease-out;
+}
+
+.disclaimer:hover{
+  position: absolute;
+  top: 5px;
+  left:20px;
+  color: white;
+  opacity: 1;
+  font-size: 12px;
+  font-family: everett;
+  filter: blur(0.3px);
+}
+
+.disclaimerBlurred{
+  position: absolute;
+  top: 5px;
+  left:20px;
+  color: white;
+  opacity: 0.1;
+  font-size: 12px;
+  font-family: everett;
+  filter: blur(1.8px);
+  transition: 0.6s;
+  transition-timing-function: ease-out;
+}
+
+.disclaimerBlurred:hover{
+  position: absolute;
+  top: 5px;
+  left:20px;
+  color: white;
+  opacity: 1;
+  font-size: 12px;
+  font-family: everett;
+  filter: blur(0.3px);
 }
 
 .sound-button:hover{
